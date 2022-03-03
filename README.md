@@ -30,7 +30,7 @@ One Piece Pirate Crew Wireframe
  - once sign-in submit button is clicked user will be prompt with a success or error message
  - client will be directed to the Social Network page
 
- 3. Client post page
+ 3. Client Create Crew page
  - client will use hamburger drop-down to sign-out and change-password
  - client must see fetch, add and delete buttons to interact with the database
 
