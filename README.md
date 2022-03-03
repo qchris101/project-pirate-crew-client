@@ -19,7 +19,7 @@ MVP User Stories
 
 ## WireFrame
 One Piece Pirate Crew Wireframe
-![**One Piece Pirate Crew**]()
+![**One Piece Pirate Crew**](https://gyazo.com/805ff2313b1f40eff228548cde67f188)
 
 
  1. Client must be able to sign-up successfully
