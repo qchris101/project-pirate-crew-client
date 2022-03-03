@@ -19,7 +19,7 @@ MVP User Stories
 
 ## WireFrame
 One Piece Pirate Crew Wireframe
-![**One Piece Pirate Crew**](https://gyazo.com/805ff2313b1f40eff228548cde67f188)
+![**One Piece Pirate Crew](https://i.gyazo.com/805ff2313b1f40eff228548cde67f188.png)
 
 
  1. Client must be able to sign-up successfully
@@ -45,4 +45,4 @@ One Piece Pirate Crew Wireframe
  6. Client will be able to delete a Crew
  - once deleted client should not be able to see it.
 
-## ERD[One Piece Crew](https://gyazo.com/99cb87b4eb28f1d4fb5e672ed3197706)
+## ERD[One Piece Crew](https://i.gyazo.com/99cb87b4eb28f1d4fb5e672ed3197706.png)
