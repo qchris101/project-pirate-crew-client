@@ -1,39 +1,28 @@
-import React, { useState, useEffect } from 'react'
-import { Navigate } from 'react-router-dom'
+import { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 
 import { signOut } from '../../api/auth'
 import { signOutSuccess } from '../AutoDismissAlert/messages'
 
-const SignOut = ({ msgAlert, clearUser, user }) => {
-  const [shouldNavigate, setShouldNavigate] = useState(false)
+class SignOut extends Component {
+  componentDidMount () {
+    const { msgAlert, history, clearUser, user } = this.props
 
-  // this is like componentDidMount, it will run whenever the SignOut component
-  // is mounted (or added) to the page
-  useEffect(() => {
-  // for performance reasons, when using `useEffect`
-  // it's a best practice to create a helper function w/ async/await
-    const performSignOut = async () => {
-    // make a signOut axios request
-      await signOut(user)
-
-      msgAlert({
-        heading: 'Signed Out Successfully',
-        message: signOutSuccess,
-        variant: 'success'
-      })
-
-      // reset the user back to its initial value
-      clearUser()
-      setShouldNavigate(true)
-    }
-    performSignOut()
-  }, [])
-
-  if (!user || shouldNavigate) {
-    return <Navigate to='/' />
+    signOut(user)
+      .finally(() =>
+        msgAlert({
+          heading: 'Signed Out Successfully',
+          message: signOutSuccess,
+          variant: 'success'
+        })
+      )
+      .finally(() => history.push('/'))
+      .finally(() => clearUser())
   }
 
-  return ''
+  render () {
+    return ''
+  }
 }
 
-export default SignOut
+export default withRouter(SignOut)
