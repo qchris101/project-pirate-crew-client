@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link, Redirect, useParams } from 'react-router-dom'
+import { Link, Navigate, useParams } from 'react-router-dom'
 import { Spinner, Button } from 'react-bootstrap'
 import { deleteCrew, showCrew } from '../../api/crew'
 // import { format } from 'timeago.js'
@@ -14,7 +14,7 @@ const Crew = ({ user, msgAlert }) => {
   // if user is null, redirect to home page
   // Note: Must check before useEffect, since it needs user
   if (!user) {
-    return <Redirect to='/' />
+    return <Navigate to='/' />
   }
 
   useEffect(() => {
@@ -59,7 +59,7 @@ const Crew = ({ user, msgAlert }) => {
       </Spinner>
     )
   } else if (deleted) {
-    return <Redirect to='/crews/' />
+    return <Navigate to='/crews' />
   } else {
     // We have a post, display it!
     return (

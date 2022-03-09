@@ -3,11 +3,15 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import { Link, NavLink } from 'react-router-dom'
+// import { Signpost2Fill } from 'react-bootstrap-icons'
 
 const authenticatedOptions = (
   <>
     <NavLink to='/change-password' className='nav-link'>Change Password</NavLink>
     <NavLink to='/sign-out' className='nav-link'>Sign Out</NavLink>
+    <NavLink to='/crews/create' className='nav-link'>Create a Crew</NavLink>
+    <NavLink to='/crews/' className='nav-link'>All Crews </NavLink>
+    <NavLink to='/crews/owner' className='nav-link'>See Your Crews </NavLink>
   </>
 )
 
