@@ -4,7 +4,7 @@ import { showCrew, updateCrew } from '../../api/crew'
 import CrewForm from './CrewForm'
 
 const CrewEdit = ({ user, msgAlert }) => {
-  const [title, setTitle] = useState('')
+  const [name, setName] = useState('')
   //   const [text, setText] = useState('')
   const [updated, setUpdated] = useState(false)
   const { id } = useParams()
@@ -21,8 +21,8 @@ const CrewEdit = ({ user, msgAlert }) => {
     // https://stackoverflow.com/a/53572588
     const fetchData = async () => {
       try {
-        const res = await showCrew(id, user)
-        setTitle(res.data.crew.title)
+        const res = await showCrew(id, name, user)
+        setName(res.data.crew.name)
         // setText(res.data.crew.text)
       } catch (error) {
         msgAlert({
@@ -39,7 +39,7 @@ const CrewEdit = ({ user, msgAlert }) => {
     event.preventDefault()
 
     try {
-      await updateCrew(id, title, user)
+      await updateCrew(id, name, user)
       setUpdated(true)
     } catch (error) {
       msgAlert({
@@ -61,8 +61,8 @@ const CrewEdit = ({ user, msgAlert }) => {
         <h3>Edit Crew Name</h3>
         <CrewForm
           handleSubmit={handleSubmit}
-          title={title}
-          setTitle={setTitle}
+          title={name}
+          setTitle={setName}
         />
       </div>
     </div>

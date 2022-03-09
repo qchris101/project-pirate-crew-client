@@ -39,14 +39,6 @@ const UsersCreatedCrews = ({ user, msgAlert }) => {
   const crewList = usersCrews.map(crew => (
     <div className='posts' key={crew._id}>
       <Link to={`/crews/${crew._id}`}>{crew.title}</Link>
-      {/* <span className='postDate'>{format(post.createdAt)}</span> */}
-      {/* <h6>{post.text}</h6>
-      <h6>Feelings: {post.feelings === 1
-        ? '😋'
-        : post.feelings === 2
-          ? '😝'
-          : post.feelings === 3 ? '😐' : post.feelings === 4 ? '😖' : '😭'}</h6>
-      <h6>{post.owner}</h6> */}
     </div>
   ))
 

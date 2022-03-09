@@ -50,8 +50,6 @@ const Crew = ({ user, msgAlert }) => {
     }
   }
 
-  // 3 states:
-  // If movie is `null`, we are loading
   if (!crew) {
     return (
       <Spinner animation='border' role='status'>
