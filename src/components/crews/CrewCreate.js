@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { Redirect } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 import { createCrew } from '../../api/crew'
 import CrewForm from './CrewForm'
+
 const CrewCreate = ({ user, msgAlert }) => {
   const [name, setName] = useState('')
   const [createdId, setCreatedId] = useState(null)
@@ -28,10 +29,10 @@ const CrewCreate = ({ user, msgAlert }) => {
 
   // if user is null, redirect to home page
   if (!user) {
-    return <Redirect to='/' />
+    return <Navigate to='/' />
   } else if (createdId) {
     // if crew has been created,Navigate to the 'show' page
-    return <Redirect to={`/crews/${createdId}`} />
+    return <Navigate to={`/crews/${createdId}`} />
   }
   return (
     <div className='row'>
