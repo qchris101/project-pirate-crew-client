@@ -104,12 +104,12 @@ class App extends Component {
                 element={<Crews msgAlert={this.msgAlert} user={user} /> }
               />
               <Route
-                path='/crews/owner'
-                element={<UsersCreatedCrews msgAlert={this.msgAlert} user={user} /> }
-              />
-              <Route
                 path='/crews/:id/edit'
                 element={<CrewEdit msgAlert={this.msgAlert} user={user} /> }
+              />
+              <Route
+                path='/crews/owner'
+                element={<UsersCreatedCrews msgAlert={this.msgAlert} user={user} /> }
               />
             </Routes>
           </main>

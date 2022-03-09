@@ -15,7 +15,7 @@ const Crews = ({ user, msgAlert }) => {
     const getCrews = async () => {
       try {
         const response = await indexCrew(user)
-        setCrews(response.data.crews)
+        setCrews(response.data.crew)
       } catch (error) {
         // Alert the user, that they failed to sign up
         msgAlert({
@@ -38,7 +38,7 @@ const Crews = ({ user, msgAlert }) => {
   }
   const crewList = crews.map(crew => (
     <div className='crews' key={crew._id}>
-      <Link to={`/crews/${crew._id}`}>{crew.title}</Link>
+      <Link to={`/crews/${crew._id}/edit`}>{crew.name}</Link>
     </div>
   ))
 
