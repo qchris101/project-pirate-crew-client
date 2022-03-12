@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/project-pirate-crew-client/static/css/main.29a09df0.chunk.css",
+    "main.js": "/project-pirate-crew-client/static/js/main.a14477bb.chunk.js",
+    "main.js.map": "/project-pirate-crew-client/static/js/main.a14477bb.chunk.js.map",
+    "runtime-main.js": "/project-pirate-crew-client/static/js/runtime-main.33997d76.js",
+    "runtime-main.js.map": "/project-pirate-crew-client/static/js/runtime-main.33997d76.js.map",
+    "static/js/2.f282b951.chunk.js": "/project-pirate-crew-client/static/js/2.f282b951.chunk.js",
+    "static/js/2.f282b951.chunk.js.map": "/project-pirate-crew-client/static/js/2.f282b951.chunk.js.map",
+    "index.html": "/project-pirate-crew-client/index.html",
+    "static/css/main.29a09df0.chunk.css.map": "/project-pirate-crew-client/static/css/main.29a09df0.chunk.css.map",
+    "static/js/2.f282b951.chunk.js.LICENSE.txt": "/project-pirate-crew-client/static/js/2.f282b951.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.33997d76.js",
+    "static/js/2.f282b951.chunk.js",
+    "static/css/main.29a09df0.chunk.css",
+    "static/js/main.a14477bb.chunk.js"
+  ]
+}
