@@ -21,7 +21,7 @@ const CrewEdit = ({ user, msgAlert }) => {
     // https://stackoverflow.com/a/53572588
     const fetchData = async () => {
       try {
-        const res = await showCrew(id, name, user)
+        const res = await showCrew(id, user)
         setName(res.data.crew.name)
         // setText(res.data.crew.text)
       } catch (error) {
@@ -61,8 +61,8 @@ const CrewEdit = ({ user, msgAlert }) => {
         <h3>Edit Crew Name</h3>
         <CrewForm
           handleSubmit={handleSubmit}
-          title={name}
-          setTitle={setName}
+          name={name}
+          setName={setName}
         />
       </div>
     </div>

@@ -12,7 +12,7 @@ const CrewCreate = ({ user, msgAlert }) => {
 
     try {
       const res = await createCrew(name, user)
-      setCreatedId(res.data.crew._id)
+      setCreatedId(res.data.crew.id)
       msgAlert({
         heading: 'Crew Created',
         message: `Created ${name} successfully.`,

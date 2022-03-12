@@ -5,7 +5,7 @@ import { SendCheck } from 'react-bootstrap-icons'
 const CrewForm = ({ handleSubmit, name, setName }) => (
   <Form onSubmit={handleSubmit}>
     <Form.Group controlId='name'>
-      <Form.Label>Name</Form.Label>
+      <Form.Label>Enter Crew Name</Form.Label>
       <Form.Control
         placeholder='Crew Name'
         name='name'

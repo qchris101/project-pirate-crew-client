@@ -3,7 +3,7 @@ import { Link, Navigate, useParams } from 'react-router-dom'
 import { Spinner, Button } from 'react-bootstrap'
 import { deleteCrew, showCrew } from '../../api/crew'
 // import { format } from 'timeago.js'
-// import './Post.css'
+import './Crew.css'
 import { SendCheck, TrashFill } from 'react-bootstrap-icons'
 
 const Crew = ({ user, msgAlert }) => {
@@ -25,7 +25,6 @@ const Crew = ({ user, msgAlert }) => {
       try {
         const res = await showCrew(id, user)
         setCrew(res.data.crew)
-        console.log(user)
       } catch (error) {
         msgAlert({
           heading: 'Crew failed to load this is coming from (Crew.js Error)',
@@ -61,11 +60,9 @@ const Crew = ({ user, msgAlert }) => {
   } else {
     // We have a post, display it!
     return (
-      <div className='post'>
-        <div className='PostWrapper'>
-          <h3>{crew.name}</h3>
-          {/* <span className='postDate'>{format(crew.createdAt)}</span>
-          </h3> */}
+      <div className='crew'>
+        <div className='CrewWrapper'>
+          <h3 >{crew.name}</h3>
           <Link to={`/crews/${id}/edit`}>
             <Button className='Bttn' variant='primary' type='submit'>Update Crew <SendCheck /></Button>
           </Link>

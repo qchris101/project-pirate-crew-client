@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import { Link, NavLink } from 'react-router-dom'
 // import { Signpost2Fill } from 'react-bootstrap-icons'
+import './Header.css'
 
 const authenticatedOptions = (
   <>
@@ -29,10 +30,10 @@ const alwaysOptions = (
 )
 
 const Header = ({ user }) => (
-  <Navbar bg='primary' variant='dark' expand='md'>
+  <Navbar className='navbar' bg='primary' variant='dark' expand='md'>
     <Container>
       <Navbar.Brand>
-        <Link to='/' style={{ color: '#FFF', textDecoration: 'none' }}>react-auth-template</Link>
+        <Link to='/' style={{ color: '#FFF', textDecoration: 'none' }} className='logo'>One Piece Pirate Crew</Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls='basic-navbar-nav' />
       <Navbar.Collapse id='basic-navbar-nav'>
