@@ -6,6 +6,7 @@ import { signUpSuccess, signUpFailure } from '../AutoDismissAlert/messages'
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import './Login.css'
 
 const SignUp = ({ msgAlert, setUser }) => {
   const [email, setEmail] = useState('')
@@ -43,45 +44,49 @@ const SignUp = ({ msgAlert, setUser }) => {
   }
 
   return (
-    <div className='row'>
-      <div className='col-sm-10 col-md-8 mx-auto mt-5'>
-        <h3>Sign Up</h3>
-        <Form onSubmit={onSignUp}>
-          <Form.Group controlId='email'>
-            <Form.Label>Email address</Form.Label>
-            <Form.Control
-              required
-              type='email'
-              name='email'
-              value={email}
-              placeholder='Enter email'
-              onChange={event => setEmail(event.target.value)}
-            />
-          </Form.Group>
-          <Form.Group controlId='password'>
-            <Form.Label>Password</Form.Label>
-            <Form.Control
-              required
-              name='password'
-              value={password}
-              type='password'
-              placeholder='Password'
-              onChange={event => setPassword(event.target.value)}
-            />
-          </Form.Group>
-          <Form.Group controlId='passwordConfirmation'>
-            <Form.Label>Password Confirmation</Form.Label>
-            <Form.Control
-              required
-              name='passwordConfirmation'
-              value={passwordConfirmation}
-              type='password'
-              placeholder='Confirm Password'
-              onChange={event => setPasswordConfirmation(event.target.value)}
-            />
-          </Form.Group>
-          <Button className='mt-2' variant='primary' type='submit'>Submit</Button>
-        </Form>
+    <div className='login'>
+      <div className='row'>
+        <div className='col-sm-10 col-md-8 mx-auto mt-5'>
+          <div className='loginLeft'>
+            <h3>Sign Up</h3>
+            <Form className='loginBox' onSubmit={onSignUp}>
+              <Form.Group controlId='email'>
+                <Form.Label>Email address</Form.Label>
+                <Form.Control
+                  required
+                  type='email'
+                  name='email'
+                  value={email}
+                  placeholder='Enter email'
+                  onChange={event => setEmail(event.target.value)}
+                />
+              </Form.Group>
+              <Form.Group controlId='password'>
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  required
+                  name='password'
+                  value={password}
+                  type='password'
+                  placeholder='Password'
+                  onChange={event => setPassword(event.target.value)}
+                />
+              </Form.Group>
+              <Form.Group controlId='passwordConfirmation'>
+                <Form.Label>Password Confirmation</Form.Label>
+                <Form.Control
+                  required
+                  name='passwordConfirmation'
+                  value={passwordConfirmation}
+                  type='password'
+                  placeholder='Confirm Password'
+                  onChange={event => setPasswordConfirmation(event.target.value)}
+                />
+              </Form.Group>
+              <Button className='loginRegisterButton Bttn' variant='primary' type='submit'>Submit</Button>
+            </Form>
+          </div>
+        </div>
       </div>
     </div>
   )

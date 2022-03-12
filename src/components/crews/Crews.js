@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { indexCrew } from '../../api/crew'
 import { Link, Navigate } from 'react-router-dom'
 import { Spinner } from 'react-bootstrap'
+import './Crews.css'
+
 // import { format } from 'timeago.js'
 // import './Posts.css'
-const Crews = ({ user, msgAlert }) => {
+const Crews = ({ user, msgAlert, handleDeleteClick }) => {
   const [crews, setCrews] = useState([])
 
   if (!user) {
@@ -37,8 +39,8 @@ const Crews = ({ user, msgAlert }) => {
     )
   }
   const crewList = crews.map(crew => (
-    <div className='crews' key={crew._id}>
-      <Link to={`/crews/${crew._id}/edit`}>{crew.name}</Link>
+    <div className='crews' key={crews._id}>
+      <Link to={`/crews/${crew.id}/edit`}>{crew.name}</Link>
     </div>
   ))
 
@@ -47,6 +49,7 @@ const Crews = ({ user, msgAlert }) => {
       <div className='col-sm-10 col-md-8 mx-auto mt-5'>
         <h3>Crews</h3>
         <ul>{crewList}</ul>
+
       </div>
     </div>
   )

@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(4, 12, 26);
+    color: rgb(191, 180, 167);
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  .textLink{
+    position:relative;
+    z-index:9999;
+  }
+  
+  form{
+    position: absolute;
+    }
+    

@@ -11,16 +11,13 @@ import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 
 import Home from './components/crews/Home'
-// import Posts from './components/posts/Posts'
-// import PostEdit from './components/posts/PostEdit'
-// import Post from './components/posts/Post'
 import CrewCreate from './components/crews/CrewCreate'
 import Crew from './components/crews/Crew'
 import Crews from './components/crews/Crews'
 import UsersCreatedCrews from './components/crews/UsersCreatedCrews'
-import CrewEdit from './components/crews/CreateEdit'
-// import OneUsersAllPosts from './components/posts/OneUsersAllPosts'
-// import './app.css'
+import CrewEdit from './components/crews/CrewEdit'
+
+import './App.css'
 
 class App extends Component {
   constructor (props) {
@@ -55,7 +52,7 @@ class App extends Component {
 
     return (
       <Fragment>
-        <div className='a'>
+        <div className='textLink'>
           <Header user={user} />
           {msgAlerts.map((msgAlert) => (
             <AutoDismissAlert
@@ -92,19 +89,19 @@ class App extends Component {
                 element={<Home msgAlert={this.msgAlert} user={user} /> }
               />
               <Route
-                path='/crews/create'
+                path='/crews/create/'
                 element={<CrewCreate msgAlert={this.msgAlert} user={user} /> }
               />
               <Route
-                path='/crews/:id'
+                path='/crews/:id/'
                 element={<Crew msgAlert={this.msgAlert} user={user} /> }
               />
               <Route
-                path='/crews'
+                path='/crews/'
                 element={<Crews msgAlert={this.msgAlert} user={user} /> }
               />
               <Route
-                path='/crews/:id/edit'
+                path='/crews/:id/edit/'
                 element={<CrewEdit msgAlert={this.msgAlert} user={user} /> }
               />
               <Route
