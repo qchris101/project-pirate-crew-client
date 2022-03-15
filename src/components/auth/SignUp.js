@@ -48,7 +48,7 @@ const SignUp = ({ msgAlert, setUser }) => {
       <div className='row'>
         <div className='col-sm-10 col-md-8 mx-auto mt-5'>
           <div className='loginLeft'>
-            <h3>Sign Up</h3>
+            <h3 className='signUp-text'>Sign Up</h3>
             <Form className='loginBox' onSubmit={onSignUp}>
               <Form.Group controlId='email'>
                 <Form.Label>Email address</Form.Label>
